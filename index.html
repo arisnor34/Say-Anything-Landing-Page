@@ -6,22 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    <title>Say Anything</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Hurricane&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">    <title>Say Anything</title>
     <style>
         body {
             background-color: #08B6E3;
+            margin: 0;
+            padding: 0;
         }
         .navigation {
+            width: 100%;
             background-color: white;
             font-family: 'Nunito Sans', sans-serif;
             font-size: 26px;
+            margin-top: 15px;
             padding-top: 19px;
             padding-bottom: 19px;
+            
         }
         h1,h2 {
             font-family: 'Hurricane', cursive;
-            font color: white;
+            color: white;
         }
         h1 {
             font-size: 300px;
@@ -31,6 +37,31 @@
         }
         h2 {
             font-size: 150px;
+        }
+        footer {
+            background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/786/original/Say-Anything_1.jpg?1683438162) ;
+            background-color: #08B6E3;
+            background-blend-mode: multiply;
+            background-size: cover;
+            height: 350px;
+        }
+        .signature-txt {
+            color: white;
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 38px;
+        }
+        a {
+            text-decoration: none;
+            color: #002B36;
+        }
+        a.signature {
+            color: white; 
+        }
+        a.signature :hover {
+            color: #08B6E3;
+        }
+        img.studio-logo {
+            max-height: 100px;
         }
     </style>
 </head>
@@ -43,8 +74,12 @@
     </div>
     <div class="header">
         <h1>say</h1>
-        <img class="headimg" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/787/original/large_yXVwqlavYZ9K0RosR2F7XffUxD9-removebg-preview_1.png?1683438179">
+        <img class="headimg" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/787/original/large_yXVwqlavYZ9K0RosR2F7XffUxD9-removebg-preview_1.png?1683438179" alt="famous Loyd Dobler Boombox Scene">
         <h2>anything</h2>
     </div>
+    <footer>
+        <img class="studio-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/785/original/Vector.png?1683438030" alt="20th Century Fox Logo">
+        <p class="signature-txt"><a class="signature" href="https://www.figma.com/file/WdSI2sJcq2yoa6XM97VBep/Say-Anything?type=design&node-id=0%3A1&t=NQqPIMRzonY5nesk-1">designed</a> & <a class="signature" href="https://github.com/arisnor34/Say-Anything-Landing-Page">coded</a> by <a class="signature" href="https://resplendent-sundae-072622.netlify.app/">Skye Norman</a></p>
+    </footer>
 </body>
 </html>
