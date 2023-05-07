@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📻</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,30 +23,63 @@
             font-size: 26px;
             margin-top: 15px;
             padding-top: 19px;
-            padding-bottom: 19px;
-            
+            padding-bottom: 5px;
+        }
+        .grid{
+            display: grid;
+            grid-gap: 6px;
+        }
+        .grid-7-colnav {
+            grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
         }
         a {
             text-decoration: none;
             color: #002B36;
+            z-index: 1;
         }
         a:hover {
             color: #08B6E3;
         }
 
 
-        h1,h2 {
+        .header {
+            height: 650px;
+        }
+        h1, h2 {
             font-family: 'Hurricane', cursive;
             color: white;
+            font-weight: 100;
         }
         h1 {
             font-size: 300px;
         }
         .headimg {
-            max-height: 800px;
+            max-height: 850px;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            margin-top: -70px;
+            padding-left: 18%;
+            padding-bottom: 50px;
         }
         h2 {
             font-size: 150px;
+        }
+
+        .divider{
+            height: 45px;
+        }
+        .grid-5-divcol {
+            grid-template-columns: 1.5fr 2fr 1fr 2fr 1.5fr ;
+        }
+        
+        h3 {
+            margin-top: 0;
+            font-weight: 100;
+            color: #002B36;
+            font-family: 'Nunito Sans', sans-serif;
+            letter-spacing: 10px;
+            font-size: 35px;
         }
 
 
@@ -59,9 +93,10 @@
             color: white;
             font-family: 'Fjalla One', sans-serif;
             font-size: 38px;
+            text-decoration: none;
         }
         a.signature:hover {
-            color: #08B6E3;
+            color: #DD8847;
             cursor: pointer;
         }
         .sig-cont {
@@ -83,16 +118,25 @@
     </style>
 </head>
 <body>
-    <div class="navigation">
-        <a href="#">plot</a>
-        <a href="#">characters</a>
+    <div class="navigation grid grid-7-colnav">
+        <p></p>
+        <a class="plot" href="#">plot</a>
+        <a class="charact" href="#">characters</a>
+        <p></p>
         <a href="#">trailer</a>
-        <a href="#">credits</a>
+        <a class="cred" href="#">credits</a>
     </div>
     <div class="header">
         <h1>say</h1>
-        <img class="headimg" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/787/original/large_yXVwqlavYZ9K0RosR2F7XffUxD9-removebg-preview_1.png?1683438179" alt="famous Loyd Dobler Boombox Scene">
+        <img class="headimg" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/883/original/Group_1.png?1683489049" alt="famous Loyd Dobler Boombox Scene">
         <h2>anything</h2>
+    </div>
+    <div class="grid grid-5-divcol divider navigation">
+        <p></p>
+        <h3 class="date">April 14, 1989</h3>
+        <p></p>
+        <h3 class="dir">Cameron Crowe</h3>
+        <p></p>
     </div>
     <footer>
         <img class="studio-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/785/original/Vector.png?1683438030" alt="20th Century Fox Logo">
