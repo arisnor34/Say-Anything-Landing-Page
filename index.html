@@ -80,8 +80,6 @@
             font-family: 'Fjalla One', sans-serif;
             font-size: 66px;
             background-color: white;
-            margin-top: 35px;
-            margin-right: 1400px;
             padding-left: 41px;
         }
         .disc {
@@ -100,6 +98,77 @@
             top: 0;
             margin-top: -30px;
             margin-bottom: 21px;
+        }
+        .char-grid1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-left: 360px;
+            margin-bottom: 20px;
+            margin-top: -25px;
+        }
+        .char-grid2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-left: 260px;
+            margin-bottom: 20px;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            width: 350px;
+        }
+        .card img {
+            max-width: 100%;
+            height: 200px;
+            border-radius: 6px 0 0 6px;
+        }
+        .card .content {
+            padding: 20px;
+        }
+        .row1 h4 {
+            font-family: 'Fjalla One', sans-serif;
+            background-color: white;
+            font-size: 1.5rem;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        .row2 h4 {
+            font-family: 'Fjalla One', sans-serif;
+            background-color: white;
+            font-size: 1.5rem;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+        .card p {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 1rem;
+        }
+        .title-grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: -18px;
+            margin-right: 1400px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr 0.25fr 1fr 0.5fr;
+            grid-gap: 10px;
+            margin-bottom: 15px;
+            margin-top: -25px;
+        }
+        .grid-item {
+            padding: 20px;
+            text-align: center;
+        }
+        .credit-grid{
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 20px; 
         }
 
         .div-bottom {
@@ -164,23 +233,115 @@
     
     <section id="section1" class="content-section">
         <div class="grid grid-2-col">
-        <h2>plot synopsis</h2>
+            <div class="title-grid">
+                <h2 class="grid-item">plot synopsis</h2>
+            </div>
         <p class="disc">In a charming, critically acclaimed tale of first love, Lloyd, an eternal optimist, seeks to capture the heart of Diane, an unattainable high-school beauty and straight-A student. It surprises just about everyone when she returns the sentiment. But Diane's overly possessive, divorced father doesn't approve and it will take more than the power of love to conquer all.</p>
         </div>
     </section>
-    <section id="section2" class="content-section">
-        <h2>characters</h2>
-        <p class="disc">This is the content of section 2.</p>
+    <section id="section2" class="content-section show">
+        <div class="title-grid">
+            <h2 class="grid-item">characters</h2>
+        </div>
+        <div class="char-grid1">
+            <div class="card row1">
+              <img class="char-image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/062/original/Lloyd_Dobler.png?1683566973" alt="Image Description">
+              <div class="content">
+                <h4>Lloyd Dobler</h4>
+                <p>Lloyd Dobler is a kick-boxer wearing his heart on his sleeve who would do anything for the woman he loves.</p>
+              </div>
+            </div>
+            <div class="card row1">
+              <img class="char-image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/060/original/Diane_Court.png?1683566937" alt="Image Description">
+              <div class="content">
+                <h4>Diane Court</h4>
+                <p>Diane Court is a rule-following brainiac trapped in the body of a game show hostess.</p>
+              </div>
+            </div>
+          </div>
+          <div class="char-grid2">
+            <div class="card row2">
+              <img class="char-image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/058/original/Constance_Dobler.png?1683566919" alt="Image Description">
+              <div class="content">
+                <h4>Constance Dobler</h4>
+                <p>Lloyd's older sister that takes care of Lloyd and lets him live with her.</p>
+              </div>
+            </div>
+            <div class="card row2">
+              <img class="char-image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/059/original/Corey_Flood.png?1683566931" alt="Image Description">
+              <div class="content">
+                <h4>Corey Flood</h4>
+                <p>Best friend to Lloyd Dobler.</p>
+              </div>
+            </div>
+            <div class="card row2">
+                <img class="char-image" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/061/original/James_Court.png?1683566964" alt="Image Description">
+                <div class="content">
+                  <h4>James Court</h4>
+                  <p>Diane's overprotective father.</p>
+                </div>
+              </div>
+          </div>
     </section>
-    <section id="section3" class="content-section show">
-        <h2>trailer</h2>
+    <section id="section3" class="content-section">
+        <div class="title-grid">
+            <h2 class="grid-item">trailer</h2>
+        </div>
         <div class="video-container">
         <iframe class="embed-vid" width="560" height="315" src="https://www.youtube.com/embed/DI5HRjRsoTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </section>
     <section id="section4" class="content-section">
-        <h2>credits</h2>
-        <p class="disc">This is the content of section 4.</p>
+        <div class="title-grid">
+            <h2 class="grid-item">credits</h2>
+        </div>
+        <div class="grid-container credit-grid">
+            <div class="grid-item"></div>
+            <div class="grid-item">Cameron Crowe</div>
+            <div class="grid-item">...</div>
+            <div class="grid-item">Direcror & Writer</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">John Cusack</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">Lloyd Dobler</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Ione Skye</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">Diane Court</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">John Mahoney</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">James Court</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Joan Cusack</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">Constance Dobler</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Lili Taylor</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">Corey Flood</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Amy Brooks</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">D.C.</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Loren Dean</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">Joe</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Glenn Walker Harris Jr.</div>
+            <div class="grid-item">as</div>
+            <div class="grid-item">Jason Dobler</div>
+            <div class="grid-item"></div>
+        </div>
     </section>
 
     <div class="div-bottom"></div>
