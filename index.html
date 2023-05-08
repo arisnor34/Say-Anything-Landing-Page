@@ -43,15 +43,7 @@
 
 
         .header {
-            height: 650px;
-        }
-        h1, h2 {
-            font-family: 'Hurricane', cursive;
-            color: white;
-            font-weight: 100;
-        }
-        h1 {
-            font-size: 300px;
+            height: 650px;  
         }
         .headimg {
             max-height: 850px;
@@ -62,9 +54,6 @@
             padding-left: 18%;
             padding-bottom: 50px;
         }
-        h2 {
-            font-size: 150px;
-        }
 
         .divider{
             height: 45px;
@@ -72,7 +61,6 @@
         .grid-5-divcol {
             grid-template-columns: 1.5fr 2fr 1fr 2fr 1.5fr ;
         }
-        
         h3 {
             margin-top: 0;
             font-weight: 100;
@@ -80,6 +68,27 @@
             font-family: 'Nunito Sans', sans-serif;
             letter-spacing: 10px;
             font-size: 35px;
+        }
+
+        .content-section {display: none;}
+        .show {display: block;}
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 1rem;
+        }
+
+        .col-1 {
+            grid-column: 1 / 2;
+        }
+
+        .col-2 {
+            grid-column: 2 / 3;
+        }
+
+        .div-bottom {
+            height: 20px;
+            background-color: white;
         }
 
 
@@ -120,16 +129,14 @@
 <body>
     <div class="navigation grid grid-7-colnav">
         <p></p>
-        <a class="plot" href="#">plot</a>
-        <a class="charact" href="#">characters</a>
+        <a onclick="toggleSection(1, event)" href="#">plot</a>
+        <a onclick="toggleSection(2, event)" href="#">characters</a>
         <p></p>
-        <a href="#">trailer</a>
-        <a class="cred" href="#">credits</a>
+        <a onclick="toggleSection(3, event)" href="#">trailer</a>
+        <a onclick="toggleSection(4, event)" href="#">credits</a>
     </div>
     <div class="header">
-        <h1>say</h1>
         <img class="headimg" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/883/original/Group_1.png?1683489049" alt="famous Loyd Dobler Boombox Scene">
-        <h2>anything</h2>
     </div>
     <div class="grid grid-5-divcol divider navigation">
         <p></p>
@@ -138,11 +145,58 @@
         <h3 class="dir">Cameron Crowe</h3>
         <p></p>
     </div>
+    
+          <section class="sect1">
+            <div id="section1" class="content-section grid grid-2-col">
+            <h2 class="col-1">plot synopsis</h2>
+            <p class="col-2">In a charming, critically acclaimed tale of first love, Lloyd, an eternal optimist, seeks to capture the heart of Diane, an unattainable high-school beauty and straight-A student. It surprises just about everyone when she returns the sentiment. But Diane's overly possessive, divorced father doesn't approve and it will take more than the power of love to conquer all.</p>
+            </div>
+          </section>
+          <section class="sect2">
+            <div id="section2" class="content-section grid grid-2-col">
+            <h2 class="col-1">Section 2</h2>
+            <p class="col-2">This is the content of section 2.</p>
+            </div>
+        </section>
+          <section class="sect3">
+            <div id="section3" class="content-section grid grid-2-col">
+            <h2 class="col-1">Section 3</h2>
+            <p class="col-2">This is the content of section 3.</p>
+            </div>
+          </section>
+          <section class="sect4">
+            <div id="section4" class="content-section grid grid-2-col">
+            <h2 class="col-1">Section 4</h2>
+            <p class="col-2">This is the content of section 4.</p>
+            </div>
+          </section>
+
+    <div class="div-bottom"></div>
+
     <footer>
         <img class="studio-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/785/original/Vector.png?1683438030" alt="20th Century Fox Logo">
         <div class="sig-cont">
             <p class="signature"><a class="signature" href="https://www.figma.com/file/WdSI2sJcq2yoa6XM97VBep/Say-Anything?type=design&node-id=0%3A1&t=NQqPIMRzonY5nesk-1">designed</a> & <a class="signature" href="https://github.com/arisnor34/Say-Anything-Landing-Page">coded</a> by <a class="signature" href="https://resplendent-sundae-072622.netlify.app/">Skye Norman</a></p>
         </div>
     </footer>
+<script>
+function toggleSection(id, event) {
+  event.preventDefault();
+  var section = document.getElementById("section" + id);
+  var sections = document.getElementsByClassName("content-section");
+
+  for (var i = 0; i < sections.length; i++) {
+    if (sections[i].classList.contains("show") && sections[i] != section) {
+      sections[i].classList.remove("show");
+    }
+  }
+
+  if (section.classList.contains("show")) {
+    section.classList.remove("show");
+  } else {
+    section.classList.add("show");
+  }
+}
+</script>
 </body>
 </html>
