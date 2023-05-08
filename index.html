@@ -70,20 +70,26 @@
             font-size: 35px;
         }
 
-        .content-section {display: none;}
-        .show {display: block;}
         .content-section {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-gap: 1rem;
+            display: none;
         }
-
-        .col-1 {
-            grid-column: 1 / 2;
+        .show {
+            display: block;
         }
-
-        .col-2 {
-            grid-column: 2 / 3;
+        h2 {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 66px;
+            background-color: white;
+            margin-top: 35px;
+            margin-right: 1400px;
+            padding-left: 41px;
+        }
+        .disc {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 36px;  
+            margin-left: 609px;
+            margin-top: -130px;
+            margin-right: 80px;
         }
 
         .div-bottom {
@@ -129,11 +135,11 @@
 <body>
     <div class="navigation grid grid-7-colnav">
         <p></p>
-        <a onclick="toggleSection(1, event)" href="#">plot</a>
-        <a onclick="toggleSection(2, event)" href="#">characters</a>
+        <a onclick="toggleSection(1, event)">plot</a>
+        <a onclick="toggleSection(2, event)">characters</a>
         <p></p>
-        <a onclick="toggleSection(3, event)" href="#">trailer</a>
-        <a onclick="toggleSection(4, event)" href="#">credits</a>
+        <a onclick="toggleSection(3, event)">trailer</a>
+        <a onclick="toggleSection(4, event)">credits</a>
     </div>
     <div class="header">
         <img class="headimg" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/883/original/Group_1.png?1683489049" alt="famous Loyd Dobler Boombox Scene">
@@ -146,37 +152,31 @@
         <p></p>
     </div>
     
-          <section class="sect1">
-            <div id="section1" class="content-section grid grid-2-col">
-            <h2 class="col-1">plot synopsis</h2>
-            <p class="col-2">In a charming, critically acclaimed tale of first love, Lloyd, an eternal optimist, seeks to capture the heart of Diane, an unattainable high-school beauty and straight-A student. It surprises just about everyone when she returns the sentiment. But Diane's overly possessive, divorced father doesn't approve and it will take more than the power of love to conquer all.</p>
-            </div>
-          </section>
-          <section class="sect2">
-            <div id="section2" class="content-section grid grid-2-col">
-            <h2 class="col-1">Section 2</h2>
-            <p class="col-2">This is the content of section 2.</p>
-            </div>
-        </section>
-          <section class="sect3">
-            <div id="section3" class="content-section grid grid-2-col">
-            <h2 class="col-1">Section 3</h2>
-            <p class="col-2">This is the content of section 3.</p>
-            </div>
-          </section>
-          <section class="sect4">
-            <div id="section4" class="content-section grid grid-2-col">
-            <h2 class="col-1">Section 4</h2>
-            <p class="col-2">This is the content of section 4.</p>
-            </div>
-          </section>
+    <section id="section1" class="content-section">
+        <div class="grid grid-2-col">
+        <h2>plot synopsis</h2>
+        <p class="disc">In a charming, critically acclaimed tale of first love, Lloyd, an eternal optimist, seeks to capture the heart of Diane, an unattainable high-school beauty and straight-A student. It surprises just about everyone when she returns the sentiment. But Diane's overly possessive, divorced father doesn't approve and it will take more than the power of love to conquer all.</p>
+        </div>
+    </section>
+    <section id="section2" class="content-section">
+        <h2>characters</h2>
+        <p class="disc">This is the content of section 2.</p>
+    </section>
+    <section id="section3" class="content-section">
+        <h2>trailers</h2>
+        <p class="disc">This is the content of section 3.</p>
+    </section>
+    <section id="section4" class="content-section">
+        <h2>credits</h2>
+        <p class="disc">This is the content of section 4.</p>
+    </section>
 
     <div class="div-bottom"></div>
 
     <footer>
-        <img class="studio-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/785/original/Vector.png?1683438030" alt="20th Century Fox Logo">
+        <a href="20thcenturystudios.com" target="_blank"><img class="studio-logo" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/785/original/Vector.png?1683438030" alt="20th Century Fox Logo"></a>
         <div class="sig-cont">
-            <p class="signature"><a class="signature" href="https://www.figma.com/file/WdSI2sJcq2yoa6XM97VBep/Say-Anything?type=design&node-id=0%3A1&t=NQqPIMRzonY5nesk-1">designed</a> & <a class="signature" href="https://github.com/arisnor34/Say-Anything-Landing-Page">coded</a> by <a class="signature" href="https://resplendent-sundae-072622.netlify.app/">Skye Norman</a></p>
+            <p class="signature"><a class="signature" href="https://www.figma.com/file/WdSI2sJcq2yoa6XM97VBep/Say-Anything?type=design&node-id=0%3A1&t=NQqPIMRzonY5nesk-1" target="_blank">designed</a> & <a class="signature" href="https://github.com/arisnor34/Say-Anything-Landing-Page" target="_blank">coded</a> by <a class="signature" href="https://resplendent-sundae-072622.netlify.app/" target="_blank">Skye Norman</a></p>
         </div>
     </footer>
 <script>
